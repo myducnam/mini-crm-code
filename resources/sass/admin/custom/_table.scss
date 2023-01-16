@@ -1,0 +1,67 @@
+.table {
+  &.-vertical-align-center {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.table-bordered {
+  &.-active-head {
+    th {
+      background-color: $color-alto-1;
+    }
+  }
+}
+
+.div-table {
+  .div-tr {
+    display: flex;
+    flex-wrap: wrap;
+
+    .div-th,
+    .div-td {
+      // border: solid 1px $color-dark-4;
+      box-shadow: 1px 0 0 0 $color-d-table-border, 0 1px 0 0 $color-d-table-border, 1px 1px 0 0 $color-d-table-border,
+        /* Just to fix the corner */ 1px 0 0 0 $color-d-table-border inset, 0 1px 0 0 $color-d-table-border inset;
+      padding: $grid-1 $grid-2;
+      text-align: left;
+      font-weight: $font-weight-regular;
+
+      &.nowrap {
+        white-space: nowrap;
+      }
+
+      &.-size-auto {
+        flex: 1;
+      }
+      @for $i from 1 through 20 {
+        // pc
+        &.-size-#{$i * 5} {
+          width: $i * 5%;
+          flex: 0 0 ($i * 5%);
+        }
+        // tb
+        &.-size-tb-#{$i * 5} {
+          @include mq("tb", "down") {
+            width: $i * 5%;
+            flex: 0 0 ($i * 5%);
+          }
+        }
+      }
+    }
+
+    .div-th {
+      background-color: $color-alto-1;
+    }
+  }
+
+  &.-small {
+    font-size: $font-size-small;
+
+    .div-th,
+    .div-td {
+      padding: 0.4rem $grid-1;
+    }
+  }
+}

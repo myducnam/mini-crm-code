@@ -1,0 +1,58 @@
+// Font
+$font-family: 'Noto Sans JP', sans-serif;
+
+$font-size-xx-large: 2rem;
+$font-size-x-large: 1.8rem;
+$font-size-large: 1.6rem;
+$font-size-medium: 1.4rem;
+$font-size-small: 1.2rem;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Color
+$color-alto-0: #ffffff;
+$color-alto-1: #f2f2f2;
+
+$color-light-1: rgba(#fff, 1);
+
+$color-rank-s: #eac74f;
+
+$color-nav-border: #888888;
+
+$color-dark-3: rgba(#000, .26);
+
+$color-primary: #475499;
+$color-alert: #E91111;
+
+$color-d-table-border: #dddddd;
+
+// Gird
+$grid-1: .8rem;
+$grid-2: $grid-1 * 2;
+$grid-3: $grid-1 * 3;
+$grid-4: $grid-1 * 4;
+$grid-5: $grid-1 * 5;
+$grid-6: $grid-1 * 6;
+$grid-7: $grid-1 * 7;
+$grid-8: $grid-1 * 8;
+$grid-9: $grid-1 * 9;
+$grid-10: $grid-1 * 10;
+
+// Media Query
+$breakpoints: (
+  'tb': '768px',
+  'pc': '960px',
+) !default;
+$directions: (
+  'up': 'min',
+  'down': 'max',
+) !default;
+
+@mixin mq($breakpoint: tb, $direction: up) {
+  @media screen and (#{map-get($directions, $direction)}-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

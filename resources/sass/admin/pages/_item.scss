@@ -1,0 +1,42 @@
+.bulk-operation-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.ec-mall-popover {
+  position: absolute;
+  background-color: #ffffff;
+  top: 110px;
+  left: 12px;
+  align-items: stretch;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-30%);
+  z-index: 1;
+  box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+
+  &.-active {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 3;
+  }
+
+  .separator {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.26);
+  }
+
+  .currency-exchange {
+    input {
+      width: 80px;
+      padding: 0.4rem;
+      border: rgba(0, 0, 0, 0.26) 1px solid;
+
+      &.has-error {
+        border-color: red;
+      }
+    }
+  }
+}

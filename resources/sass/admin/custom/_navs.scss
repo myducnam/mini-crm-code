@@ -1,0 +1,6 @@
+.nav-border-bottom {
+    &.active {
+      border-bottom: 3px solid $color-nav-border !important;
+      background-color: $color-alto-1 !important;
+    }
+}

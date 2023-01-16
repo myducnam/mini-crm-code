@@ -1,0 +1,8 @@
+{
+    "/js/admin.js": "/js/admin.js",
+    "/js/admin/company/index.js": "/js/admin/company/index.js",
+    "/js/admin/company/create_update.js": "/js/admin/company/create_update.js",
+    "/js/admin/employe/index.js": "/js/admin/employe/index.js",
+    "/js/admin/employe/create_update.js": "/js/admin/employe/create_update.js",
+    "/css/admin.css": "/css/admin.css"
+}

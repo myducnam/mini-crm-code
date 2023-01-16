@@ -1,0 +1,26 @@
+// toast
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  left: 1.5rem;
+  margin: auto;
+  z-index: 2000;
+  width: auto !important;
+  max-width: none !important;
+  font-size: 16px;
+  pointer-events: none;
+
+  &.-success {
+      background-color: #28a745;
+  }
+
+  &.-alert {
+      background-color: #dc3545;
+  }
+
+  .toast-body {
+      padding: 1rem;
+      color: #fff;
+  }
+}
