@@ -80,6 +80,8 @@
     - Click "Next" button
     - Click "Finish" button
     ```
+11. Access url: https://demo-services.local:14080/eb5e2aepk74bp2sfu429fseynwcknay4
+    ```
 #### Docker Tips
 - [Admin url](https://demo-services.local:14080/eb5e2aepk74bp2sfu429fseynwcknay4)
 - [Mailcatcher url](http://localhost:14088/)
