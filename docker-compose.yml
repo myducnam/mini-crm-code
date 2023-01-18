@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    container_name: "laravel9_web"
+    container_name: "web"
     build:
       context: .
       target: "local"
@@ -21,13 +21,13 @@ services:
       - mailcatcher
   mailcatcher:
     image: yappabe/mailcatcher
-    container_name: "laravel9_mailcatcher"
+    container_name: "mailcatcher"
     ports:
       - "14025:1025"
       - "14088:1080"
   db:
     image: mysql:5.7.12
-    container_name: "laravel9_mysql"
+    container_name: "mysql"
     ports:
       - "15326:3306"
     volumes:
@@ -39,7 +39,7 @@ services:
       - MYSQL_DATABASE=laravel9
   redis:
     image: redis
-    container_name: "laravel9_redis"
+    container_name: "redis"
     ports:
       - "18379:6379"
 volumes:

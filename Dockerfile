@@ -17,7 +17,7 @@ RUN apk add --no-cache \
 RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/latest-stable/community gnu-libiconv
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
-RUN export TZ=Asia/Tokyo
+RUN export TZ=Asia/Singapore
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install intl pdo_mysql exif gd zip
