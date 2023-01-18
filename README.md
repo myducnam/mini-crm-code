@@ -43,29 +43,12 @@
     ```shell
     docker-compose up -d
     ```
-5. Run composer
-    ```shell
-    docker-compose exec web sudo -u www composer install
-    ```
-6. Run migration
-    ```shell
-    docker-compose exec web sudo -u www php artisan migrate
-    ```
-7. Run seeder
-    ```shell
-    docker-compose exec web sudo -u www php artisan db:seed
-    ```
-8. Install NodeJS dependencies & build assets
-    ```shell
-    docker-compose exec web sudo -u www npm install
-    docker-compose exec web sudo -u www npm run dev
-    ```
-9. Update hosts
+5. Update hosts
     ```
     ...
     127.0.0.1 demo-services.local
     ```
-10. Trust the cetificate
+6. Trust the cetificate
     - On MacOS:
     ```shell
     sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ./.docker/nginx/cert/self-signed.crt
@@ -80,7 +63,7 @@
     - Click "Next" button
     - Click "Finish" button
     ```
-11. Access url: https://demo-services.local:14080/eb5e2aepk74bp2sfu429fseynwcknay4
+7. Access url: https://demo-services.local:14080/eb5e2aepk74bp2sfu429fseynwcknay4
     ```
 #### Docker Tips
 - [Admin url](https://demo-services.local:14080/eb5e2aepk74bp2sfu429fseynwcknay4)
