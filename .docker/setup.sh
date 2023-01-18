@@ -16,6 +16,7 @@ then
   composer install --no-interaction
   php artisan migrate
   php artisan db:seed
+  php artisan storage:link
   npm install
   npm run dev
 else
